@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.*;
 
 
 import java.util.List;
-
-
 @RestController
 @RequestMapping("/api")
 public class MyController {
@@ -24,7 +22,6 @@ public class MyController {
             return new ResponseWithStatus<>(allStudents, "Нет студентов", false);
         }
     }
-
     @GetMapping("/students/{id}")
     public ResponseWithStatus<Student> getStudent(@PathVariable("id") int id) {
         Student student = studentService.getStudent(id);
@@ -34,7 +31,6 @@ public class MyController {
             return new ResponseWithStatus<>(null, "Студент не найден", false);
         }
     }
-
     @PostMapping("/students")
     public ResponseWithStatus<Student> saveStudent(@RequestBody Student student) {
         Student savedStudent = studentService.saveStudent(student);
@@ -44,7 +40,6 @@ public class MyController {
             return new ResponseWithStatus<>(null, "Не удалось сохранить студента", false);
         }
     }
-
     @PutMapping("/students")
     public ResponseWithStatus<Student> updateStudent(@RequestBody Student student) {
         Student updatedStudent = studentService.saveStudent(student);
@@ -54,7 +49,6 @@ public class MyController {
             return new ResponseWithStatus<>(null, "Не удалось обновить студента", false);
         }
     }
-
     @DeleteMapping("/students/{id}")
     public ResponseWithStatus<Void> deleteStudent(@PathVariable("id") int id) {
         boolean deleted = studentService.deleteStudent(id);

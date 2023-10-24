@@ -15,6 +15,4 @@ public interface StudentService {
     Student saveStudent(Student student);
 
     boolean deleteStudent(int id);
-
-
 }

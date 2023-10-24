@@ -16,12 +16,6 @@ public interface EducationalDisciplineService {
     EducationalDiscipline saveEducationalDiscipline(EducationalDiscipline educationalDiscipline);
 
     boolean deleteEducationalDiscipline(int id);
-
-
-
-
-
-
 }
 
 
